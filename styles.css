@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root {
+--dark-blue: hsl(218, 23%, 16%);
+--dark-grayish-blue: hsl(217, 19%, 24%);
+--grayish-blue: hsl(217, 19%, 38%);
+--light-cyan: hsl(193, 38%, 86%);
+--neon-green: hsl(150, 100%, 66%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    background-color: var(--dark-blue);
+}
+
+.main {
+    position: relative;
+    max-width: 90%;
+    width: 30rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--dark-grayish-blue);
+}
+
+.id {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: .8rem;
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    color: var(--neon-green);
+    transition: 0.3s;
+}
+
+.quote {
+    text-align: center;
+    width: 70%;
+    margin-top: 2rem;
+    font-size: 28px;
+    color: var(--light-cyan);
+    transition: 0.5s;
+}
+
+.shuffle {
+    cursor: pointer;
+    position: absolute;
+    bottom: -32px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background-color: var(--neon-green);
+    box-shadow: none;
+    transition: .5s;
+}
+
+.shuffle:hover {
+    box-shadow: 0px 0px 15px 10px rgba(82, 255, 168, .6);
+}
+
+.divider-mob {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: none;
+}
+
+.divider-desk {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    display: block;
+}
+
+@media only screen and (max-width: 540px) {
+    .divider-mob {
+        display: block;
+    }
+    
+    .divider-desk {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 355px) {
+    .divider-mob {
+        width: 90%;
+    }
+
+    .id {
+        font-size: 0.6rem;
+    }
+
+    .quote {
+        font-size: 20px;
+    }
+}
